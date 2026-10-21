@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة الأمن والسلامة - جامعة الكويت | SSD KU</title>
+    <!-- تضمين Tailwind CSS للتصميم السريع والمتجاوب -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- تضمين الخطوط وأيقونات FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kuBlue: '#003366',
+                        kuGold: '#D4AF37',
+                        kuDark: '#1E293B'
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-cairo bg-slate-50 text-slate-800 antialiased">
+
+    <!-- شريط الطوارئ العلوي -->
+    <div class="bg-red-600 text-white text-sm py-2 px-4 shadow-inner">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-2 font-semibold">
+                <i class="fa-solid fa-triangle-exclamation animate-pulse"></i>
+                <span>خط الطوارئ السريع (الحرم الجامعي):</span>
+                <a href="tel:123" class="underline hover:text-yellow-200 font-bold">123 / داخلي 5555</a>
+            </div>
+            <div class="text-xs bg-red-700 px-3 py-1 rounded-full">
+                نظام الأمن والسلامة - طوارئ على مدار 24 ساعة
+            </div>
+        </div>
+    </div>
+
+    <!-- شريط التنقل الرئيسي (Navbar) -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
+            <!-- الشعار -->
+            <div class="flex items-center gap-3">
+                <div class="bg-kuBlue text-white p-3 rounded-xl shadow-md">
+                    <i class="fa-solid fa-shield-halved text-2xl text-kuGold"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold text-kuBlue leading-tight">إدارة الأمن والسلامة</h1>
+                    <p class="text-xs text-slate-500">جامعة الكويت - Kuwait University</p>
+                </div>
+            </div>
+
+            <!-- الروابط للقوات المكتبية -->
+            <div class="hidden md:flex items-center gap-6 font-semibold text-slate-600">
+                <a href="#" class="text-kuBlue hover:text-kuGold transition">الرئيسية</a>
+                <a href="#services" class="hover:text-kuBlue transition">الخدمات الإلكترونية</a>
+                <a href="#tracker" class="hover:text-kuBlue transition">تتبع الطلب</a>
+                <a href="#safety" class="hover:text-kuBlue transition">إرشادات السلامة</a>
+                <a href="#contact" class="hover:text-kuBlue transition">اتصل بنا</a>
+            </div>
+
+            <!-- زر تسجيل الدخول -->
+            <div>
+                <a href="#" class="bg-kuBlue text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-opacity-95 shadow-md transition flex items-center gap-2">
+                    <i class="fa-solid fa-user-lock"></i>
+                    <span>بوابة البلاك بورد / SSO</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- قسم الواجهة الرئيسية (Hero Section) -->
+    <header class="relative bg-gradient-to-r from-kuBlue to-slate-900 text-white py-20 px-4 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="bg-kuGold text-kuBlue text-xs font-bold px-3 py-1.5 rounded-full inline-block mb-4">
+                    بوابة خدمات المجتمع الجامعي
+                </span>
+                <h2 class="text-4xl sm:text-5xl font-extrabold leading-tight mb-6">
+                    سلامتكم وأمنكم هي <span class="text-kuGold">أولويتنا القصوى</span>
+                </h2>
+                <p class="text-slate-300 text-lg mb-8 leading-relaxed">
+                    منصة إدارة الأمن والسلامة بجامعة الكويت لتسهيل إصدار تصاريح المركبات، البطاقات الجامعية، وتقديم بلاغات الحالات الطارئة بكل سرعة واحترافية.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#services" class="bg-kuGold text-kuDark font-bold px-6 py-3.5 rounded-xl shadow-lg hover:bg-yellow-400 transition flex items-center gap-2">
+                        <span>استعرض الخدمات</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                    <a href="#tracker" class="bg-white/10 hover:bg-white/20 text-white border border-white/30 font-semibold px-6 py-3.5 rounded-xl transition">
+                        تتبع حالة معاملتك
+                    </a>
+                </div>
+            </div>
+
+            <!-- إحصائيات سريعة أو بطاقة تفاعلية -->
+            <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-2xl">
+                <h3 class="text-xl font-bold mb-4 text-kuGold flex items-center gap-2">
+                    <i class="fa-solid fa-bolt"></i> إنجاز سريع للخدمات
+                </h3>
+                <div class="space-y-4">
+                    <div class="bg-white/5 p-4 rounded-xl border border-white/10 flex justify-between items-center">
+                        <div>
+                            <p class="text-sm font-semibold">إصدار بطاقة جامعية بدل فاقد</p>
+                            <p class="text-xs text-slate-300">الوقت المستغرق: خلال 24 ساعة</p>
+                        </div>
+                        <span class="bg-emerald-500/20 text-emerald-300 text-xs px-2.5 py-1 rounded-md font-bold">متاح</span>
+                    </div>
+                    <div class="bg-white/5 p-4 rounded-xl border border-white/10 flex justify-between items-center">
+                        <div>
+                            <p class="text-sm font-semibold">تصريح دخول مواقف الحرم الجامعي</p>
+                            <p class="text-xs text-slate-300">لطلبة وأعضاء هيئة التدريس</p>
+                        </div>
+                        <span class="bg-emerald-500/20 text-emerald-300 text-xs px-2.5 py-1 rounded-md font-bold">متاح</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- قسم الخدمات الإلكترونية -->
+    <section id="services" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-3xl font-bold text-kuBlue mb-3">الخدمات الإلكترونية للإدارة</h2>
+            <p class="text-slate-600">اختر الخدمة المطلوبة وقم بتقديم طلبك إلكترونياً دون الحاجة لزيارة المكاتب الإدارية</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- خدمة 1 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md hover:border-kuBlue transition group">
+                <div class="w-14 h-14 bg-blue-50 text-kuBlue rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-kuBlue group-hover:text-white transition">
+                    <i class="fa-solid fa-id-card"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-800 mb-3">إصدار البطاقات الجامعية</h3>
+                <p class="text-slate-600 text-sm mb-6 leading-relaxed">طلب إصدار أو تجديد بطاقة الهوية الجامعية للطلبة والموظفين الجدد أو بدل الفاقد.</p>
+                <a href="#" class="text-kuBlue font-bold text-sm inline-flex items-center gap-2 group-hover:gap-3 transition">
+                    <span>تقديم الطلب</span>
+                    <i class="fa-solid fa-chevron-left text-xs"></i>
+                </a>
+            </div>
+
+            <!-- خدمة 2 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md hover:border-kuBlue transition group">
+                <div class="w-14 h-14 bg-blue-50 text-kuBlue rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-kuBlue group-hover:text-white transition">
+                    <i class="fa-solid fa-car"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-800 mb-3">تصاريح مواقف المركبات</h3>
+                <p class="text-slate-600 text-sm mb-6 leading-relaxed">استخراج وتسجيل تصاريح دخول المواقف المخصصة بحسب البوابات والكليات المختلفة.</p>
+                <a href="#" class="text-kuBlue font-bold text-sm inline-flex items-center gap-2 group-hover:gap-3 transition">
+                    <span>تقديم الطلب</span>
+                    <i class="fa-solid fa-chevron-left text-xs"></i>
+                </a>
+            </div>
+
+            <!-- خدمة 3 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md hover:border-kuBlue transition group">
+                <div class="w-14 h-14 bg-blue-50 text-kuBlue rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-kuBlue group-hover:text-white transition">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-800 mb-3">بلاغات الحوادث والسلامة</h3>
+                <p class="text-slate-600 text-sm mb-6 leading-relaxed">الإبلاغ عن أي ملاحظات أمنية، أعطال بالطرق الداخلية، أو طلب مساعدة إسعافية فورية.</p>
+                <a href="#" class="text-kuBlue font-bold text-sm inline-flex items-center gap-2 group-hover:gap-3 transition">
+                    <span>إرسال بلاغ</span>
+                    <i class="fa-solid fa-chevron-left text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم تتبع الطلبات التفاعلي (JavaScript Widget) -->
+    <section id="tracker" class="bg-slate-100 py-20 border-y border-slate-200">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="bg-white p-8 sm:p-10 rounded-3xl shadow-sm border border-slate-200">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-bold text-kuBlue mb-2">تتبع حالة طلبك برقم المعاملة</h3>
+                    <p class="text-slate-500 text-sm">أدخل رقم المعاملة أو الطلب لمعرفة أين وصل طلبك الآن</p>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <input type="text" id="trackInput" placeholder="مثال: SSD-2026-9812" class="flex-1 bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 focus:outline-none focus:border-kuBlue">
+                    <button onclick="trackOrder()" class="bg-kuBlue text-white font-bold px-6 py-3 rounded-xl hover:bg-opacity-90 transition">
+                        بحث سريع
+                    </button>
+                </div>
+
+                <!-- نتيجة البحث الوهمية التفاعلية -->
+                <div id="trackResult" class="mt-6 hidden bg-blue-50 border border-blue-200 p-5 rounded-2xl">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="font-bold text-kuBlue text-sm">رقم المعاملة: <span id="resId"></span></span>
+                        <span class="bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full" id="resStatus">قيد المراجعة</span>
+                    </div>
+                    <p class="text-slate-600 text-xs" id="resDesc">طلبك تم استلامه وتحويله لقسم إصدار البطاقات المختص.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر (Footer) -->
+    <footer class="bg-kuDark text-white py-12 px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-sm">
+            <div>
+                <div class="flex items-center gap-3 mb-4">
+                    <i class="fa-solid fa-shield-halved text-2xl text-kuGold"></i>
+                    <span class="font-bold text-lg">إدارة الأمن والسلامة</span>
+                </div>
+                <p class="text-slate-400 leading-relaxed">الالتزام بمعايير الأمن والسلامة العامة وحماية مرافق جامعة الكويت ومنتسبيها على مدار الساعة.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-kuGold mb-4">روابط سريعة</h4>
+                <ul class="space-y-2 text-slate-300">
+                    <li><a href="#" class="hover:text-white transition">شروط وأحكام التصاريح</a></li>
+                    <li><a href="#" class="hover:text-white transition">دليل الطوارئ والأزمات</a></li>
+                    <li><a href="#" class="hover:text-white transition">مواقع العيادات ومواقف السيارات</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-kuGold mb-4">تواصل معنا</h4>
+                <p class="text-slate-300 mb-2"><i class="fa-solid fa-location-dot ml-2"></i> مدينة الشدادية الجامعية / الحرم الرئيسي</p>
+                <p class="text-slate-300"><i class="fa-solid fa-phone ml-2"></i> هاتف: 1848000 - داخلي: 5555</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto border-t border-slate-800 pt-6 text-center text-xs text-slate-500">
+            جميع الحقوق محفوظة © 2026 إدارة الأمن والسلامة - جامعة الكويت.
+        </div>
+    </footer>
+
+    <!-- كود JavaScript التفاعلي لتتبع الطلبات -->
+    <script>
+        function trackOrder() {
+            const val = document.getElementById('trackInput').value.trim();
+            const resultBox = document.getElementById('trackResult');
+            const resId = document.getElementById('resId');
+            
+            if(val !== '') {
+                resultBox.classList.remove('hidden');
+                resId.innerText = val;
+            } else {
+                alert('الرجاء إدخال رقم معاملة صحيح');
+            }
+        }
+    </script>
+</body>
+</html>
